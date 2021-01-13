@@ -1,0 +1,59 @@
+/*
+    table of content
+    1. common css
+    2. heading css
+*/
+/* ==  common css  == */
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+ol,
+ul {
+  list-style: none;
+}
+a,
+a:hover {
+  text-decoration: none;
+}
+img {
+  vertical-align: middle;
+}
+/* ==  common css ends ==*/
+/* ==  variable  declare ends  == */
+/* == mixing declare ends ==  */
+.heading h4 {
+  font-family: 'Kaushan Script', cursive;
+  font-weight: 400;
+  font-size: 24px;
+  color: #333333;
+  margin-bottom: 12px;
+}
+.heading h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: #333333;
+  text-transform: uppercase;
+  position: relative;
+}
+.heading h3::before {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background: #f38181;
+  position: absolute;
+  bottom: -38px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.heading p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #999999;
+  margin-top: 66px;
+}
+/* ==  heding  css  ends  == */

@@ -1,0 +1,93 @@
+/*
+    table of content
+    1. common css
+    2. heading css
+*/
+
+/* ==  common css  == */
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+ol,ul{
+    list-style: none;
+}
+
+a,a:hover{
+    text-decoration: none;
+}
+
+img{
+    vertical-align: middle;
+}
+/* ==  common css ends ==*/
+@pc1: #f38181;
+@pc2: #fce38a;
+@pc_3: #95e1d3;
+@bc : #333333;
+@bc2 : #999999;
+@mf: 'Montserrat', sans-serif;
+@hf: 'Kaushan Script', cursive;
+@pf : 'Roboto', sans-serif;
+@grd1 :rgba(243, 129, 129, 0.9);
+@grd2 :rgba(252, 227, 138, 0.9);
+/* ==  variable  declare ends  == */
+.tr(@tr){
+    transition: all linear @tr;
+    -moz-transition: all linear @tr;
+    -o-transition: all linear @tr;
+    -ms-transition: all linear @tr;
+    -webkit-transition: all linear @tr;
+}
+.overlay(){
+    background-image: linear-gradient(@grd1,@grd2);
+}
+.p() {
+    font-family: @pf;
+    font-weight: 400;
+    font-size: 15px;
+    color: @bc2;
+    margin-top: 66px;
+}
+.p2(){
+    font-family: @pf;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 24px;
+    color: @bc2;
+}
+/* == mixing declare ends ==  */
+.heading{
+    h4{
+        font-family: @hf;
+        font-weight: 400;
+        font-size: 24px;
+        color: @bc;
+        margin-bottom: 12px;
+    }
+    h3{
+        font-family: @mf;
+        font-weight: 700;
+        font-size: 30px;
+        color: @bc;
+        text-transform: uppercase;
+        position: relative;
+        &::before{
+            content: '';
+            width: 60px;
+            height: 3px;
+            background: @pc1;
+            position: absolute;
+            bottom: -38px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    p{
+        .p();
+    }
+    
+}
+/* ==  heding  css  ends  == */
