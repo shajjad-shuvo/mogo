@@ -1,4 +1,5 @@
 $(function () {
+    'use strict';
     // banner slider;
     $('.banner-slider').slick({
         infinite: true,
@@ -8,4 +9,5 @@ $(function () {
         autoplay : true,
         dots : true,
     });
+    // banner slider ends ;
 });

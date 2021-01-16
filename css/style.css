@@ -100,13 +100,13 @@ img {
   color: #fce38a;
 }
 .navbar .nav-link:hover::after {
-  width: 50px;
+  width: 100%;
 }
 .navbar .active {
   color: #fce38a;
 }
 .navbar .active::after {
-  width: 50px;
+  width: 100%;
 }
 /* ==  navbar  css  ends  == */
 #banner {
@@ -152,6 +152,52 @@ img {
   padding: 0 30px;
   line-height: 34px;
   margin-top: 125px;
+  position: relative;
+  z-index: 1;
+  transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+  -ms-transition: all linear 0.5s;
+  -webkit-transition: all linear 0.5s;
+}
+#banner .banner-text a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #fff;
+  z-index: -1;
+  transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+  -ms-transition: all linear 0.5s;
+  -webkit-transition: all linear 0.5s;
+}
+#banner .banner-text a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background: #fff;
+  z-index: -1;
+  transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+  -ms-transition: all linear 0.5s;
+  -webkit-transition: all linear 0.5s;
+}
+#banner .banner-text a:hover {
+  color: #f38181;
+}
+#banner .banner-text a:hover::before {
+  width: 50%;
+}
+#banner .banner-text a:hover::after {
+  width: 50%;
 }
 #banner .slick-dots {
   position: absolute;
