@@ -43,7 +43,7 @@ img{
     -ms-transition: all linear @tr;
     -webkit-transition: all linear @tr;
 }
-.overlay(){
+.overlay-grd(){
     background-image: linear-gradient(@grd1,@grd2);
 }
 .p() {
@@ -239,4 +239,31 @@ img{
     }
 }
 /* ==  banner  css  ends  == */
+#story{
+    padding-top: 90px;
+    padding-bottom: 110px;
+    .story-image{
+        margin-top: 104px;
+        position: relative;
+        overflow: hidden;
+        .overlay{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: -100%;
+            left: 0;
+            .overlay-grd();
+            .tr(0.5s);
+            i{
+                margin-top: 105px;
+            }
+        }
+        &:hover{
+            .overlay{
+                top: 0;
+            }
+        }
+    }
+}
+/* ==  story  css  ends  == */
 
