@@ -272,3 +272,20 @@ img {
   top: 0;
 }
 /* ==  story  css  ends  == */
+#funfact {
+  background: #95e1d3;
+  padding-top: 88px;
+  padding-bottom: 88px;
+}
+#funfact .fun-text h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 72px;
+}
+#funfact .fun-text h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+/* ==  funfact  css  ends  == */

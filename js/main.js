@@ -21,4 +21,12 @@ $(function () {
         dots : true,
     });
     // banner slider ends ;
+    
+    // funfact counter
+    $('.counter').counterUp({
+        delay: 10,
+        time: 1000
+    });
+    // funfact counter
+    
 });
