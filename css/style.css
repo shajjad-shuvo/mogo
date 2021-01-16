@@ -59,7 +59,11 @@ img {
 }
 /* ==  heading  css  ends  == */
 .navbar {
-  background: #f4f4f4;
+  position: fixed;
+  top: 28px;
+  left: 0;
+  z-index: 99999;
+  width: 100%;
 }
 .navbar .nav-link {
   font-family: 'Montserrat', sans-serif;
@@ -69,20 +73,38 @@ img {
   text-transform: uppercase;
   position: relative;
   display: block;
-  background: #f38181;
   padding: 0 !important;
   margin: 0 10px;
+  transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+  -ms-transition: all linear 0.5s;
+  -webkit-transition: all linear 0.5s;
 }
 .navbar .nav-link::after {
   content: '';
-  width: 50px;
+  width: 0px;
   height: 3px;
   background: #fce38a;
   position: absolute;
   left: 0;
-  bottom: -2px;
+  bottom: -12px;
+  transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+  -ms-transition: all linear 0.5s;
+  -webkit-transition: all linear 0.5s;
+}
+.navbar .nav-link:hover {
+  color: #fce38a;
+}
+.navbar .nav-link:hover::after {
+  width: 50px;
 }
 .navbar .active {
   color: #fce38a;
+}
+.navbar .active::after {
+  width: 50px;
 }
 /* ==  navbar  css  ends  == */
