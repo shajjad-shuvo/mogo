@@ -58,6 +58,28 @@ img {
   color: #999999;
   margin-top: 66px;
 }
+.sticky-nav {
+  z-index: 99999;
+  position: fixed;
+  left: 0;
+  top: 0 !important;
+  background: rgba(243, 129, 129, 0.9);
+  padding-bottom: 20px !important;
+  animation: slideDown 1s linear;
+  transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+  -ms-transition: all linear 0.5s;
+  -webkit-transition: all linear 0.5s;
+}
+@keyframes slideDown {
+  from {
+    top: -30px;
+  }
+  to {
+    top: 0;
+  }
+}
 /* ==  heading  css  ends  == */
 .navbar {
   position: fixed;

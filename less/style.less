@@ -92,6 +92,25 @@ img{
     }
     
 }
+.sticky-nav{
+    z-index: 99999;
+    position: fixed;
+    left: 0;
+    top: 0 !important;
+    background: @grd1;
+    padding-bottom: 20px !important;
+    animation: slideDown 1s linear;    
+    .tr(0.5s);
+}
+
+@keyframes slideDown{
+    from{
+        top: -30px;
+    }
+    to{
+        top: 0;
+    }
+}
 /* ==  heading  css  ends  == */
 .navbar{
     position: fixed;
