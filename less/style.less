@@ -4,6 +4,8 @@
     2. heading css
     3. navbar css
     4. banner css
+    4. funfact css
+    4. service css
 */
 
 /* ==  common css  == */
@@ -59,6 +61,13 @@ img{
     font-style: italic;
     font-size: 24px;
     color: @bc2;
+}
+.subheading(){
+    font-family: @mf;
+    font-weight: 400;
+    font-size: 14px;
+    color: @bc;
+    text-transform: uppercase;
 }
 /* == mixing declare ends ==  */
 .heading{
@@ -304,4 +313,26 @@ img{
     }
 }
 /* ==  funfact  css  ends  == */
+#service{
+    padding-top: 115px;
+    padding-bottom: 15px;
+    .heading{
+        padding-bottom: 100px;
+    }
+    .service-item{
+        i{
+            color: #95e1d3;
+            font-size: 30px;
+        }
+        h6{
+            .subheading();
+        }
+        p{
+            .p();
+            margin-top: 0;
+            padding-bottom: 105px;
+        }
+    }
+}
+/* ==  service  css  ends  == */
 
