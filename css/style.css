@@ -7,6 +7,7 @@
     5. funfact css
     6. service css
     7. unique css
+    8. service-detail css
 */
 /* ==  common css  == */
 * {
@@ -345,3 +346,55 @@ img {
   }
 }
 /* ==  unique  css  ends  == */
+#service-detail {
+  padding-top: 110px;
+  padding-bottom: 120px;
+}
+#service-detail .heading {
+  padding-bottom: 95px;
+}
+#service-detail .service-slidedown .card {
+  margin-bottom: 10px;
+}
+#service-detail .service-slidedown .card .card-header {
+  background: none;
+  padding: 8px !important;
+}
+#service-detail .service-slidedown .card .card-header h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #333333;
+  text-transform: uppercase;
+}
+#service-detail .service-slidedown .card .card-header h2 .btn-link {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #333333;
+  text-transform: uppercase;
+}
+#service-detail .service-slidedown .card .card-header h2 .btn-link i {
+  color: #95e1d3;
+  margin-right: 16px;
+}
+#service-detail .service-slidedown .card .card-header h2 .btn-link:hover {
+  text-decoration: none;
+}
+#service-detail .service-slidedown .card .card-header h2 .arrow {
+  float: right;
+  margin-top: 10px;
+}
+#service-detail .service-slidedown .card .card-body {
+  padding: 10px !important;
+}
+#service-detail .service-slidedown .card .card-body p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 24px;
+  color: #999999;
+  font-size: 15px;
+  line-height: 24px;
+}
+/* ==  service-detail  css  ends  == */

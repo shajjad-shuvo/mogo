@@ -7,26 +7,31 @@
     5. funfact css
     6. service css
     7. unique css
+    8. service-detail css
 */
 
 /* ==  common css  == */
-*{
+* {
     padding: 0;
     margin: 0;
     outline: 0;
     box-sizing: border-box;
 }
-ol,ul{
+
+ol,
+ul {
     list-style: none;
 }
 
-a,a:hover{
+a,
+a:hover {
     text-decoration: none;
 }
 
-img{
+img {
     vertical-align: middle;
 }
+
 /* ==  common css ends ==*/
 @pc1: #f38181;
 @pc2: #fce38a;
@@ -35,20 +40,24 @@ img{
 @bc2 : #999999;
 @mf: 'Montserrat', sans-serif;
 @hf: 'Kaushan Script', cursive;
-@pf : 'Roboto', sans-serif;
+@pf : 'Roboto',
+sans-serif;
 @grd1 :rgba(243, 129, 129, 0.9);
 @grd2 :rgba(252, 227, 138, 0.9);
+
 /* ==  variable  declare ends  == */
-.tr(@tr){
+.tr(@tr) {
     transition: all linear @tr;
     -moz-transition: all linear @tr;
     -o-transition: all linear @tr;
     -ms-transition: all linear @tr;
     -webkit-transition: all linear @tr;
 }
-.overlay-grd(){
-    background-image: linear-gradient(@grd1,@grd2);
+
+.overlay-grd() {
+    background-image: linear-gradient(@grd1, @grd2);
 }
+
 .p() {
     font-family: @pf;
     font-weight: 400;
@@ -56,37 +65,42 @@ img{
     color: @bc2;
     margin-top: 66px;
 }
-.p2(){
+
+.p2() {
     font-family: @pf;
     font-weight: 300;
     font-style: italic;
     font-size: 24px;
     color: @bc2;
 }
-.subheading(){
+
+.subheading() {
     font-family: @mf;
     font-weight: 400;
     font-size: 14px;
     color: @bc;
     text-transform: uppercase;
 }
+
 /* == mixing declare ends ==  */
-.heading{
-    h4{
+.heading {
+    h4 {
         font-family: @hf;
         font-weight: 400;
         font-size: 24px;
         color: @bc;
         margin-bottom: 12px;
     }
-    h3{
+
+    h3 {
         font-family: @mf;
         font-weight: 700;
         font-size: 30px;
         color: @bc;
         text-transform: uppercase;
         position: relative;
-        &::before{
+
+        &::before {
             content: '';
             width: 60px;
             height: 3px;
@@ -97,37 +111,42 @@ img{
             transform: translateX(-50%);
         }
     }
-    p{
+
+    p {
         .p();
     }
-    
+
 }
-.sticky-nav{
+
+.sticky-nav {
     z-index: 99999;
     position: fixed;
     left: 0;
     top: 0 !important;
     background: @grd1;
     padding-bottom: 20px !important;
-    animation: slideDown 1s linear;    
+    animation: slideDown 1s linear;
     .tr(0.5s);
 }
 
-@keyframes slideDown{
-    from{
+@keyframes slideDown {
+    from {
         top: -30px;
     }
-    to{
+
+    to {
         top: 0;
     }
 }
+
 /* ==  heading  css  ends  == */
-.navbar{
+.navbar {
     position: fixed;
     top: 16px;
     left: 0;
     z-index: 99999;
     width: 100%;
+
     .nav-link {
         font-family: @mf;
         font-weight: 400;
@@ -139,6 +158,7 @@ img{
         padding: 0 !important;
         margin: 0 10px;
         .tr(.5s);
+
         &::after {
             content: '';
             width: 0px;
@@ -149,47 +169,54 @@ img{
             bottom: -12px;
             .tr(.5s);
         }
-        &:hover{
+
+        &:hover {
             color: @pc2;
-            &::after{
+
+            &::after {
                 width: 100%;
             }
         }
     }
-    .active{
+
+    .active {
         color: @pc2;
-        &::after{
+
+        &::after {
             width: 100%;
         }
     }
 }
+
 /* ==  navbar  css  ends  == */
-#banner{
+#banner {
     padding-top: 230px;
     padding-bottom: 230px;
     background: url(../images/banner-bg.jpg) no-repeat center / cover;
     position: relative;
     z-index: 1;
-    &::after{
+
+    &::after {
         content: '';
         width: 100%;
         height: 100%;
-        background-image: linear-gradient(@grd1,@grd2);
+        background-image: linear-gradient(@grd1, @grd2);
         position: absolute;
         top: 0;
         left: 0;
         z-index: -1;
     }
-    
-    .banner-text{
-        h4{
+
+    .banner-text {
+        h4 {
             font-family: @hf;
             text-transform: capitalize;
             font-size: 72px;
             font-weight: 400;
             margin-bottom: 50px;
         }
-        h1{
+
+        h1 {
             font-family: @mf;
             text-transform: uppercase;
             font-weight: 700;
@@ -197,7 +224,8 @@ img{
             line-height: 34px;
             line-height: 140px;
         }
-        a{
+
+        a {
             display: inline-block;
             font-family: @mf;
             text-transform: uppercase;
@@ -211,7 +239,8 @@ img{
             position: relative;
             z-index: 1;
             .tr(0.5s);
-            &::before{
+
+            &::before {
                 content: '';
                 position: absolute;
                 top: 0;
@@ -222,7 +251,8 @@ img{
                 z-index: -1;
                 .tr(.5s);
             }
-            &::after{
+
+            &::after {
                 content: '';
                 position: absolute;
                 top: 0;
@@ -233,24 +263,28 @@ img{
                 z-index: -1;
                 .tr(.5s);
             }
-            &:hover{
-                color:  @pc1;
-                &::before{
+
+            &:hover {
+                color: @pc1;
+
+                &::before {
                     width: 50%;
                 }
-                &::after{
+
+                &::after {
                     width: 50%;
                 }
             }
         }
     }
-    
-    .slick-dots{
+
+    .slick-dots {
         position: absolute;
         left: 50%;
         bottom: -150px;
         transform: translateX(-50%);
-        li{
+
+        li {
             float: left;
             width: 20px;
             height: 20px;
@@ -258,24 +292,29 @@ img{
             border-radius: 50%;
             cursor: pointer;
             margin: 0 10px;
-            button{
+
+            button {
                 display: none;
             }
         }
-        .slick-active{
+
+        .slick-active {
             background: #ff2828;
         }
     }
 }
+
 /* ==  banner  css  ends  == */
-#story{
+#story {
     padding-top: 90px;
     padding-bottom: 110px;
-    .story-image{
+
+    .story-image {
         margin-top: 104px;
         position: relative;
         overflow: hidden;
-        .overlay{
+
+        .overlay {
             width: 100%;
             height: 100%;
             position: absolute;
@@ -283,29 +322,34 @@ img{
             left: 0;
             .overlay-grd();
             .tr(0.5s);
-            i{
+
+            i {
                 margin-top: 105px;
             }
         }
-        &:hover{
-            .overlay{
+
+        &:hover {
+            .overlay {
                 top: 0;
             }
         }
     }
 }
+
 /* ==  story  css  ends  == */
-#funfact{
+#funfact {
     background: #95e1d3;
     padding-top: 88px;
     padding-bottom: 88px;
-    .fun-text{
-        h4{
+
+    .fun-text {
+        h4 {
             font-family: @mf;
             font-weight: 700;
             font-size: 72px;
         }
-        h6{
+
+        h6 {
             font-family: @mf;
             font-weight: 400;
             font-size: 14px;
@@ -313,36 +357,44 @@ img{
         }
     }
 }
+
 /* ==  funfact  css  ends  == */
-#service{
+#service {
     padding-top: 115px;
     padding-bottom: 15px;
-    .heading{
+
+    .heading {
         padding-bottom: 100px;
     }
-    .service-item{
-        i{
+
+    .service-item {
+        i {
             color: #95e1d3;
             font-size: 30px;
         }
-        h6{
+
+        h6 {
             .subheading();
         }
-        p{
+
+        p {
             .p();
             margin-top: 0;
             padding-bottom: 105px;
         }
     }
 }
+
 /* ==  service  css  ends  == */
-#unique{
+#unique {
     padding-top: 110px;
     padding-bottom: 0px;
     background: url(../images/unique-bg.jpg) no-repeat center / cover;
-    .design-image{
+
+    .design-image {
         position: relative;
-        .mobile{
+
+        .mobile {
             position: absolute;
             bottom: -100px;
             right: -100px;
@@ -350,16 +402,70 @@ img{
             animation-fill-mode: forwards;
             animation-direction: alternate;
         }
-       
+
     }
 }
- @keyframes upDown {
-     0% {
-         bottom: -100px;
-     }
-     100% {
-         bottom: -50px;
-     }
- }
-/* ==  unique  css  ends  == */
 
+@keyframes upDown {
+    0% {
+        bottom: -100px;
+    }
+
+    100% {
+        bottom: -50px;
+    }
+}
+
+/* ==  unique  css  ends  == */
+#service-detail {
+    padding-top: 110px;
+    padding-bottom: 120px;
+
+    .heading {
+        padding-bottom: 95px;
+    }
+
+    .service-slidedown {
+        .card {
+            margin-bottom: 10px;
+            .card-header {
+                background: none;
+                padding: 8px !important;
+
+                h2 {
+                    .subheading();
+
+                    .btn-link {
+                        i {
+                            color: #95e1d3;
+                            margin-right: 16px;
+                        }
+
+                        .subheading();
+
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+
+                    .arrow {
+                        float: right;
+                        margin-top: 10px;
+                    }
+                }
+            }
+            .card-body {
+                padding: 10px !important;
+
+                p {
+                    .p2();
+                    font-size: 15px;
+                    line-height: 24px;
+                }
+            }
+        }
+
+    }
+}
+
+/* ==  service-detail  css  ends  == */
