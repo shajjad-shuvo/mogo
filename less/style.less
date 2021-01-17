@@ -4,8 +4,9 @@
     2. heading css
     3. navbar css
     4. banner css
-    4. funfact css
-    4. service css
+    5. funfact css
+    6. service css
+    7. unique css
 */
 
 /* ==  common css  == */
@@ -335,4 +336,30 @@ img{
     }
 }
 /* ==  service  css  ends  == */
+#unique{
+    padding-top: 110px;
+    padding-bottom: 0px;
+    background: url(../images/unique-bg.jpg) no-repeat center / cover;
+    .design-image{
+        position: relative;
+        .mobile{
+            position: absolute;
+            bottom: -100px;
+            right: -100px;
+            animation: upDown 3s linear infinite;
+            animation-fill-mode: forwards;
+            animation-direction: alternate;
+        }
+       
+    }
+}
+ @keyframes upDown {
+     0% {
+         bottom: -100px;
+     }
+     100% {
+         bottom: -50px;
+     }
+ }
+/* ==  unique  css  ends  == */
 
